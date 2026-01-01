@@ -2,10 +2,14 @@
 alias invim='nvim $(fzf -m --preview="bat --color=always {}")'
 alias inano='nano $(fzf -m --preview="bat --color=always {}")'
 alias ivim='nvim $(fzf -m --preview="bat --color=always {}")'
-alias icode='code $(fzf -m --preview="bat --color=always {}")'
-alias SC='cd ~/Dev/python/smartScheduler'
-alias startmongo='podman start smartscheduler-mongodb'
+alias icode='code-insiders $(fzf -m --preview="bat --color=always {}")'
 alias lg='lazygit'
+alias project='cd ~ && cd Dev/smartScheduler'
+alias code='code-insiders'
+alias ls='eza -l --icons'
+alias cat='bat'
+alias updatesys='sudo dnf update'
+
 
 ##### PATH SETUP #####
 export PATH="$HOME/.local/bin:$PATH"
@@ -54,4 +58,4 @@ if [ -f "$HOME/miniconda3/bin/conda" ]; then
   unset __conda_setup
 fi
 
-conda activate sc
+
