@@ -7,7 +7,6 @@ alias lg='lazygit'
 alias project='cd ~ && cd Dev/smartScheduler'
 alias ls='eza -l --icons'
 alias cat='bat'
-alias updatesys='sudo dnf update'
 alias setupstarfish='curl -sS https://starship.rs/install.sh | sh && starship preset catppuccin-powerline -o ~/.config/starship.toml'
 alias autosetup='git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting'
 
