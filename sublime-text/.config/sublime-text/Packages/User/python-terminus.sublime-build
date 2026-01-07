@@ -1,0 +1,7 @@
+{
+    "target": "terminus_exec",
+    "cmd": ["/home/aarijkhan/miniconda3/envs/sc/bin/python", "$file"],
+    "working_dir": "$file_path",
+    "selector": "source.python"
+}
+

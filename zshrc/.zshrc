@@ -5,8 +5,7 @@ alias ivim='nvim $(fzf -m --preview="bat --color=always {}")'
 alias icode='code-insiders $(fzf -m --preview="bat --color=always {}")'
 alias lg='lazygit'
 alias project='cd ~ && cd Dev/smartScheduler'
-alias ls='eza -l --icons'
-alias cat='bat'
+alias ls='eza -lh --icons'
 alias setupstarfish='curl -sS https://starship.rs/install.sh | sh && starship preset catppuccin-powerline -o ~/.config/starship.toml'
 alias autosetup='git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting'
 
@@ -54,9 +53,25 @@ if [ -f "$HOME/miniconda3/bin/conda" ]; then
   if [ $? -eq 0 ]; then
     eval "$__conda_setup"
   else
-    source "$HOME/miniconda3/etc/profile.d/conda.sh"
+# source "$HOME/miniconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
   fi
   unset __conda_setup
 fi
 
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/aarijkhan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/aarijkhan/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/aarijkhan/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/aarijkhan/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
