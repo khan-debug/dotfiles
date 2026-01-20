@@ -9,7 +9,7 @@ alias ls='eza -lh --icons'
 alias installstarship='curl -sS https://starship.rs/install.sh | sh && starship preset catppuccin-powerline -o ~/.config/starship.toml'
 alias setupstarship='git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting'
 alias uninstallapp="dnf list --installed 2>/dev/null | awk 'NR>1 {print $1}' | fzf | xargs -r sudo dnf remove"
-
+alias installapp="dnf list --available 2>/dev/null | awk 'NR>1 {print $1}' | fzf | xargs -r sudo dnf install"
 
 ##### PATH SETUP #####
 export PATH="$HOME/.local/bin:$PATH"
