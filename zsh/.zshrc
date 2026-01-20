@@ -6,9 +6,9 @@ alias icode='code-insiders $(fzf -m --preview="bat --color=always {}")'
 alias lg='lazygit'
 alias project='cd ~ && cd Dev/smartScheduler'
 alias ls='eza -lh --icons'
-alias setupstarfish='curl -sS https://starship.rs/install.sh | sh && starship preset catppuccin-powerline -o ~/.config/starship.toml'
-alias autosetup='git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting'
-
+alias installstarship='curl -sS https://starship.rs/install.sh | sh && starship preset catppuccin-powerline -o ~/.config/starship.toml'
+alias setupstarship='git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting'
+alias uninstallapp="dnf list --installed 2>/dev/null | awk 'NR>1 {print $1}' | fzf | xargs -r sudo dnf remove"
 
 
 ##### PATH SETUP #####
